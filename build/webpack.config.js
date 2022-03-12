@@ -1,45 +1,46 @@
-const path =require('path');
-const HtmlWebpackPlugin =require('html-webpack-plugin');
-const webpack =require('webpack');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
-module.exports={
-  // 指定打包模式
-  mode:'development',
-  entry:{
-    //配置入口文件
-    main:["@babel/polyfill",path.resolve(__dirname,'../src/main.js')]
+// build/webpack.config.js
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+module.exports = {
+  entry: {
+    // 配置入口文件
+    main: path.resolve(__dirname, '../src/main.js')
   },
-  output:{
-    //配置打包文件输出的目录
-    path:path.resolve(__dirname,'../dist'),
-    //生成js文件名称
-    filename:'js/[name].[hash:8].js',
-    //生成chunk名称
-    chunkFilename:'js/[home]/[hash:8].js',
-    //资源引用路径
-    publicPath:'./'
+  output: {
+    // 配置打包文件输出的目录
+    path: path.resolve(__dirname, '../dist'),
+    // 生成的 js 文件名称
+    filename: 'js/[name].[hash:8].js',
+    // 生成的 chunk 名称
+    chunkFilename: 'js/[name].[hash:8].js',
+    // 资源引用的路径
+    publicPath: '/'
   },
-  //实现热更新
-  devServer:{
-    hot:true,
-    port:3000,
-    contentBase:'./dist'
+  devServer: {
+    hot: true,
+    port: 3000,
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
   },
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.runtime.esm.js'
     },
+    extensions: [
+      '.js',
+      '.vue'
+    ]
   },
-  module:{
-    rules:[
+  module: {
+    rules: [
       {
         test: /\.vue$/,
         use: [
           {
             loader: 'cache-loader'
-          },
-          {
-            loader: 'thread-loader'
           },
           {
             loader: 'vue-loader',
@@ -53,36 +54,11 @@ module.exports={
       },
       {
         test: /\.jsx?$/,
-        use: [
-          {
-            loader: 'cache-loader'
-          },
-          {
-            loader: 'thread-loader'
-          },
-          {
-            loader: 'babel-loader'
-          }
-        ]
-      },{
-         test:/\.(scss|sass)$/,
-        use:[
-      {
-        loader: 'style-loader'
-     },{
-       loader:'css-loader'
-     },{
-       loader:'sass-loader',
-       options:{
-         implementation:require('dart-sass')
-       }
-     },{
-       loader:'postcss-loader'
-     }
-       ]
+        loader: 'babel-loader'
       },
+
       {
-        test: /\.(jpe?g|png|gif)$/i,
+        test: /\.(jpe?g|png|gif)$/,
         use: [
           {
             loader: 'url-loader',
@@ -91,7 +67,7 @@ module.exports={
               fallback: {
                 loader: 'file-loader',
                 options: {
-                    name: 'img/[name].[hash:8].[ext]'
+                  name: 'img/[name].[hash:8].[ext]'
                 }
               }
             }
@@ -134,20 +110,13 @@ module.exports={
       },
     ]
   },
-  plugins:[
-    new HtmlWebpackPlugin({
-       template:path.resolve(__dirname,'../public/index.html')
-    }),
-    // new webpack.NamedModulesPlugin(),
-    // 实现热更新
-    new webpack.HotModuleReplacementPlugin(),
-    //识别vue文件
+  plugins: [
     new VueLoaderPlugin(),
-    // 通过 webpack提供的DefinePlugin插件，可以很方便的定义环境变量
-    new webpack.DefinePlugin({
-      'process.env': {
-        VUE_APP_BASE_URL: JSON.stringify('http://localhost:3000')
-      }
+
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../public/index.html')
     }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ]
 }
