@@ -1,7 +1,7 @@
-const path =require('path')
-const HtmlWebpackPlugin =require('html-webpack-plugin')
-const webpack =require('webpack')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const path =require('path');
+const HtmlWebpackPlugin =require('html-webpack-plugin');
+const webpack =require('webpack');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 module.exports={
   // 指定打包模式
   mode:'development',
@@ -142,6 +142,12 @@ module.exports={
     // 实现热更新
     new webpack.HotModuleReplacementPlugin(),
     //识别vue文件
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    // 通过 webpack提供的DefinePlugin插件，可以很方便的定义环境变量
+    new webpack.DefinePlugin({
+      'process.env': {
+        VUE_APP_BASE_URL: JSON.stringify('http://localhost:3000')
+      }
+    }),
   ]
 }
