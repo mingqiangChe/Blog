@@ -2,6 +2,7 @@ module.exports = {
   root: true, // 当前配置为根配置，将不再从上级文件夹查找配置
   parserOptions: {
     parser: 'babel-eslint', // 采用 babel-eslint 作为语法解析器
+    ecmaVersion: 7,
     sourceType: 'module'  // 指定来源的类型，有两种script或module
   },
   env: {
