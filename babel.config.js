@@ -8,7 +8,7 @@ module.exports = {
     ]
   ],
   plugins: [
-     // 添加这个
+    // 添加这个
     '@babel/plugin-syntax-dynamic-import'
   ]
 }

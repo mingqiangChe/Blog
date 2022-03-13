@@ -19,6 +19,8 @@ import Home from './views/Home.vue'
 import Git from './views/Git.vue'
 import Project from './views/Project.vue'
 import Community from './views/Community.vue'
+import ToolWebsite from './views/ToolWebsite.vue'
+import File from './views/File.vue'
 export default {
 	name: 'App',
 	data() {
@@ -26,7 +28,7 @@ export default {
 			openId: Home
 		}
 	},
-	components: { Header, Footer, Blog, Home, Git, Project, Community },
+	components: { Header, Footer, Blog, Home, Git, Project, Community, ToolWebsite, File },
 	computed: {},
 	methods: {
 		open(data) {
@@ -38,7 +40,7 @@ export default {
 <style lang="scss" scoped>
 @import './assets/css/resert.css';
 .App {
-	width: 100vw;
+	/* width: 100vw; */
 	height: 100vh;
 	padding: 66px 36px 0;
 	text-align: left;

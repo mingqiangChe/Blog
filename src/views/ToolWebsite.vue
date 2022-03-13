@@ -1,9 +1,7 @@
-<!-- 社区 -->
+<!-- 工具网站 -->
 <template>
-  <div class='community'>
-    <h1>社区 待续。。。
-      osg 掘金
-    </h1>
+  <div class=''>
+    <h1>类似印象中文</h1>
   </div>
 </template>
 

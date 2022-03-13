@@ -1,10 +1,8 @@
-<!-- 社区 -->
+<!-- w3c -->
 <template>
-  <div class='community'>
-    <h1>社区 待续。。。
-      osg 掘金
-    </h1>
-  </div>
+  <frameset>
+    <frame src="https://www.w3school.com.cn/jquery/index.asp" />
+  </frameset>
 </template>
 
 <script>

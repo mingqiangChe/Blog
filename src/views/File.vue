@@ -1,9 +1,7 @@
-<!-- 社区 -->
+<!-- 技术文档 -->
 <template>
-  <div class='community'>
-    <h1>社区 待续。。。
-      osg 掘金
-    </h1>
+  <div class=''>
+    <h1>文档 个人收集用</h1>
   </div>
 </template>
 
@@ -13,6 +11,7 @@
 
 export default {
 	//import引入的组件需要注入到对象中才能使用
+	name: 'File',
 	components: {},
 	data() {
 		//这里存放数据

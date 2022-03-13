@@ -7,16 +7,22 @@
       <div class="headers1" @click="open('Blog')">
         博客
       </div>
-      <div class="headers2" @click="open('Git')">
-      </div>
       <div class="headers3" @click="open('Project')">
         项目
+      </div>
+      <div class="headers4" @click="open('ToolWebsite')">
+        工具
+      </div>
+      <div class="headers4" @click="open('File')">
+        文档
       </div>
       <div class="headers4" @click="open('Community')">
         社区
       </div>
       <div class="headers5" @click="open('')">
         待续
+      </div>
+      <div class="headers2" @click="jump">
       </div>
     </div>
   </div>
@@ -31,7 +37,9 @@ export default {
 	components: {},
 	data() {
 		//这里存放数据
-		return {}
+		return {
+			github: 'https://github.com/mingqiangChe?tab=repositories'
+		}
 	},
 	//监听属性 类似于data概念
 	computed: {},
@@ -41,6 +49,9 @@ export default {
 	methods: {
 		open(data) {
 			this.$emit('open', data)
+		},
+		jump() {
+			window.location.href = this.github
 		}
 	},
 	//生命周期 - 创建完成（可以访问当前this实例）
