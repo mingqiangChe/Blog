@@ -8,7 +8,7 @@ const webpackConfig = require('./webpack.config.js')
 const webpack = require('webpack')
 module.exports = merge(webpackConfig, {
   mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval-cheap-module-source-map',
   module: {
     rules: [
       {
@@ -31,7 +31,7 @@ module.exports = merge(webpackConfig, {
           },
           {
             loader: 'postcss-loader'
-          }
+          },
         ]
       },
     ]

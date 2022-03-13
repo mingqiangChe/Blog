@@ -1,17 +1,19 @@
 <template>
   <div class="App">
-      <router-link to="/Home">go Home</router-link>
-      <router-link to="/About">go About</router-link>
+    <Header></Header>
+    <keep-alive>
       <router-view></router-view>
+    </keep-alive>  
   </div>
 </template>
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import Header from './component/framework/Header.vue'
 export default {
   name: 'App',
   data() {
     return {};
   },
+  components:{ Header},
   computed: {
    
   },

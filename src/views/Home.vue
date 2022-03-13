@@ -1,12 +1,18 @@
 <!-- home -->
 <template>
-   <div class='Home'>Home</div>
+   <div class='Home'>
+    <!-- <img src="../assets/vue.jpg" alt=""> -->Home
+    <div id="header">
+    </div>
+
+   </div>
 </template>
 
 <script>
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 《组件名称》 from '《组件路径》';
 //  import {getListAPI,postFormAPI, putSomeAPI, deleteListAPI} from '@/api/classification'
+
 export default {
   //import引入的组件需要注入到对象中才能使用
   name:'Home',
@@ -14,7 +20,7 @@ export default {
   data() {
     //这里存放数据
     return {
-  
+      // componentId:'Home'
     };
   },
   //监听属性 类似于data概念
@@ -23,27 +29,30 @@ export default {
   watch: {},
   //方法集合
   methods: {
+// open(data){
+// this.componentId=data;
+// },
     //   promise调用，链式调用， getList()括号内只接受参数；
     //  get不传参
-      getList() {
-        getListAPI().then(res => console.log(res)).catch(err => console.log(err))
-      },
+      // getList() {
+      //   getListAPI().then(res => console.log(res)).catch(err => console.log(err))
+      // },
         //post传参
-      postForm(formData) {
-        let data = formData
-        postFormAPI(data).then(res => console.log(res)).catch(err => console.log(err))
-      },
+      // postForm(formData) {
+      //   let data = formData
+      //   postFormAPI(data).then(res => console.log(res)).catch(err => console.log(err))
+      // },
 
       //async await同步调用
-      async postForm(formData) {
-        const postRes = await postFormAPI(formData)
-        const putRes = await putSomeAPI({data: 'putTest'})
-        const deleteRes = await deleteListAPI(formData.name)
-        // 数据处理
-        console.log(postRes);
-        console.log(putRes);
-        console.log(deleteRes);
-      },
+      // async postForm(formData) {
+      //   const postRes = await postFormAPI(formData)
+      //   const putRes = await putSomeAPI({data: 'putTest'})
+      //   const deleteRes = await deleteListAPI(formData.name)
+      //   // 数据处理
+      //   console.log(postRes);
+      //   console.log(putRes);
+      //   console.log(deleteRes);
+      // },
   },
   //生命周期 - 创建完成（可以访问当前this实例）
   created() {
@@ -62,6 +71,10 @@ export default {
   activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
   }
 </script>
-<style lang='css' scoped>
-
+<style lang='scss' scoped>
+#header{
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
 </style>

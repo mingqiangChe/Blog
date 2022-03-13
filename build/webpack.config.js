@@ -56,9 +56,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-        },
-
-
+      },
       {
         test: /\.(jpe?g|png|gif)$/,
         use: [
@@ -69,7 +67,10 @@ module.exports = {
               fallback: {
                 loader: 'file-loader',
                 options: {
-                  name: 'img/[name].[hash:8].[ext]'
+                  limit: 4400,
+                  name: 'img/[name].[hash:8].[ext]',
+                  //解决图片不显示，路径为[object Module]的问题
+                  esModule: false
                 }
               }
             }
@@ -118,7 +119,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../public/index.html')
     }),
-    new webpack.NamedModulesPlugin(),
+    // new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ]
 }

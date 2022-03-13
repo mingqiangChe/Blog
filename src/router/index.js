@@ -4,19 +4,20 @@ Vue.use(VueRouter)
 export default new VueRouter({
   mode: 'hash',
   routes: [
+
     {
       path: '/Home',
-      component: () => import(/* webpackChunkName: "Home" */ '../views/Home.vue')
-      // component: Home
-    },
-    {
-      path: '/About',
-      component: () => import(/* webpackChunkName: "About" */ '../views/About.vue')
+      component: () => import(/* webpackChunkName: "HOME" */ '../views/Home.vue')
       // component: About
     },
     {
-      path: '*',
-      redirect: '/Home'
+      path: '/About',
+      component: () => import(/* webpackChunkName: "HOME" */ '../views/About.vue')
+      // component: About
+    }, {
+      path: '/Error',
+      component: () => import(/* webpackChunkName: "About" */ '../views/error/Error.vue')
+      // component: About
     }
   ]
 })
