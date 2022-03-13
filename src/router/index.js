@@ -4,7 +4,6 @@ Vue.use(VueRouter)
 export default new VueRouter({
   mode: 'hash',
   routes: [
-
     {
       path: '/',
       component: () => import(/* webpackChunkName: "HOME" */ '../views/Home.vue')
@@ -13,6 +12,14 @@ export default new VueRouter({
     {
       path: '/Blog',
       component: () => import(/* webpackChunkName: "HOME" */ '../views/Blog.vue')
+      // component: About
+    }, {
+      path: '/Git',
+      component: () => import(/* webpackChunkName: "HOME" */ '../views/Git.vue')
+      // component: About
+    }, {
+      path: '/Project',
+      component: () => import(/* webpackChunkName: "HOME" */ '../views/Project.vue')
       // component: About
     },
     {

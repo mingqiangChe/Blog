@@ -1,7 +1,7 @@
-<!-- blog想法 -->
+<!-- 社区 -->
 <template>
-  <div class='blog'>
-    <h1>blog</h1>
+  <div class='community'>
+    <h1>社区 待续。。。</h1>
   </div>
 </template>
 

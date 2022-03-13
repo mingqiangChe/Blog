@@ -1,7 +1,7 @@
-<!-- blog想法 -->
+<!-- 项目存放 -->
 <template>
-  <div class='blog'>
-    <h1>blog</h1>
+  <div class='project'>
+    <h1>项目存放</h1>
   </div>
 </template>
 

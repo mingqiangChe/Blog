@@ -11,6 +11,7 @@
     <p>有兴趣的话，交个朋友。可以给我发邮件 cmq15650272396@163.com。</p>
     <p></p>
   </div>
+
 </template>
 
 <script>
@@ -26,6 +27,7 @@ export default {
 		//这里存放数据
 		return {
 			// componentId:'Home'
+			github: 'https://github.com/mingqiangChe?tab=repositories'
 		}
 	},
 	//监听属性 类似于data概念
@@ -57,6 +59,9 @@ export default {
 		//   console.log(putRes);
 		//   console.log(deleteRes);
 		// },
+		jump() {
+			window.location.href = this.github
+		}
 	},
 	//生命周期 - 创建完成（可以访问当前this实例）
 	created() {},
@@ -75,19 +80,19 @@ export default {
 .home {
 	box-sizing: border-box;
 	padding: 110px 147px 10px;
-  &>h1{
-    color: black;
-    font-size: 32px;
-    padding-bottom: 16px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bolder;
-  }
-  &>p{
-font-size: 16px;
-padding: 16px 0;
-  }
-  &>p>i{
-    cursor: pointer;
-  }
+	& > h1 {
+		color: black;
+		font-size: 32px;
+		padding-bottom: 16px;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-weight: bolder;
+	}
+	& > p {
+		font-size: 16px;
+		padding: 16px 0;
+	}
+	& > p > i {
+		cursor: pointer;
+	}
 }
 </style>

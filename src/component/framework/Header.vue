@@ -1,21 +1,21 @@
 <!-- header -->
 <template>
   <div class="header">
-    <div class="header-left">
+    <div class="header-left" @click="open('Home')">
     </div>
     <div class='header-right'>
       <div class="headers1" @click="open('Blog')">
         博客
       </div>
-      <div class="headers2" @click="open('Blog')">
+      <div class="headers2" @click="open('Git')">
       </div>
-      <div class="headers3" @click="open('Blog')">
+      <div class="headers3" @click="open('Project')">
         项目
       </div>
-      <div class="headers4" @click="open('Blog')">
+      <div class="headers4" @click="open('Community')">
         社区
       </div>
-      <div class="headers5" @click="open('Blog')">
+      <div class="headers5" @click="open('')">
         待续
       </div>
     </div>
@@ -39,9 +39,9 @@ export default {
 	watch: {},
 	//方法集合
 	methods: {
-		// open(data){
-		//   this.$emit('open',data)
-		// }
+		open(data) {
+			this.$emit('open', data)
+		}
 	},
 	//生命周期 - 创建完成（可以访问当前this实例）
 	created() {},
@@ -58,15 +58,16 @@ export default {
 </script>
 <style lang='scss' scoped>
 .header {
-  width: 100vw;
+	width: 100vw;
 	display: flex;
 	justify-content: space-between;
 	/* align-items: center; */
-  box-sizing: border-box;
-  padding: 24px 36px;
-  opacity: 0.8;
+	box-sizing: border-box;
+	padding: 24px 36px;
+	opacity: 0.8;
 }
 .header-left {
+	cursor: pointer;
 	width: 32px;
 	height: 32px;
 	background: url(../../assets/header/footerball.png);
