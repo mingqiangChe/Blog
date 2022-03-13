@@ -6,8 +6,13 @@ export default new VueRouter({
   routes: [
 
     {
-      path: '/Home',
+      path: '/',
       component: () => import(/* webpackChunkName: "HOME" */ '../views/Home.vue')
+      // component: About
+    },
+    {
+      path: '/Blog',
+      component: () => import(/* webpackChunkName: "HOME" */ '../views/Blog.vue')
       // component: About
     },
     {
