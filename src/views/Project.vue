@@ -2,16 +2,21 @@
 <template>
   <div class='project'>
     <h1>项目存放</h1>
+
+    <footer>
+      <Footer></Footer>
+    </footer>
   </div>
 </template>
 
 <script>
+import Footer from '../component/framework/Footer.vue'
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 《组件名称》 from '《组件路径》';
 
 export default {
 	//import引入的组件需要注入到对象中才能使用
-	components: {},
+	components: { Footer },
 	data() {
 		//这里存放数据
 		return {}
@@ -35,5 +40,8 @@ export default {
 	activated() {} //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
-<style lang='css' scoped>
+<style lang='scss' scoped>
+.project {
+	margin-top: 66px;
+}
 </style>

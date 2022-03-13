@@ -1,9 +1,12 @@
 <!-- 社区 -->
 <template>
   <div class='community'>
-    <h1>社区 待续。。。
-      osg 掘金
-    </h1>
+    <div class="ceng1">
+      <h1>社区</h1>
+      <el-button type="primary" @click="jumpJue">掘金</el-button>
+      <el-button type="primary" @click="jumpOschina">oschina</el-button>
+      <el-button type="primary" @click="jumpStackoverflow">stackoverflow</el-button>
+    </div>
   </div>
 </template>
 
@@ -16,14 +19,28 @@ export default {
 	components: {},
 	data() {
 		//这里存放数据
-		return {}
+		return {
+			jue: 'https://juejin.cn',
+			oschina: 'https://www.oschina.net',
+			stackoverflow: 'https://stackoverflow.com/'
+		}
 	},
 	//监听属性 类似于data概念
 	computed: {},
 	//监控data中的数据变化
 	watch: {},
 	//方法集合
-	methods: {},
+	methods: {
+		jumpJue() {
+			window.location.href = this.jue
+		},
+		jumpOschina() {
+			window.location.href = this.oschina
+		},
+		jumpStackoverflow() {
+			window.location.href = this.stackoverflow
+		}
+	},
 	//生命周期 - 创建完成（可以访问当前this实例）
 	created() {},
 	//生命周期 - 挂载完成（可以访问DOM元素）
@@ -37,5 +54,15 @@ export default {
 	activated() {} //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
-<style lang='css' scoped>
+<style lang='scss' scoped>
+.community {
+	padding: 20px 66px;
+}
+.ceng1 {
+	margin-top: 24px;
+	& > h1 {
+		font-size: 24px;
+		padding: 20px 0;
+	}
+}
 </style>

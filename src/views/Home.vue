@@ -10,11 +10,16 @@
     <p>目前的话，仅可以在<i @click="jump">github</i>上寻找到我。</p>
     <p>有兴趣的话，交个朋友。可以给我发邮件 cmq15650272396@163.com。</p>
     <p></p>
+
+    <footer>
+      <Footer></Footer>
+    </footer>
   </div>
 
 </template>
 
 <script>
+import Footer from '../component/framework/Footer.vue'
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 《组件名称》 from '《组件路径》';
 //  import {getListAPI,postFormAPI, putSomeAPI, deleteListAPI} from '@/api/classification'
@@ -22,7 +27,7 @@
 export default {
 	//import引入的组件需要注入到对象中才能使用
 	name: 'Home',
-	components: {},
+	components: { Footer },
 	data() {
 		//这里存放数据
 		return {

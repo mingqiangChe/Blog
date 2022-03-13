@@ -37,6 +37,10 @@ export default {
 </script>
 <style lang='scss' scoped>
 .footer {
+	/* width: 100vw; */
+	margin-top: 66px;
 	font-size: 16px;
+	height: 36px;
+	opacity: 0.5;
 }
 </style>

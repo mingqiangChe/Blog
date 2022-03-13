@@ -72,10 +72,10 @@ export default {
 	width: 100vw;
 	display: flex;
 	justify-content: space-between;
-	/* align-items: center; */
 	box-sizing: border-box;
 	padding: 24px 36px;
-	opacity: 0.8;
+	/* opacity: 0.8; */
+	background-color: antiquewhite;
 }
 .header-left {
 	cursor: pointer;

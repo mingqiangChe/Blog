@@ -6,9 +6,6 @@
     <keep-alive>
       <component :is="openId"></component>
     </keep-alive>
-    <div id="footer">
-      <Footer></Footer>
-    </div>
   </div>
 </template>
 <script>
@@ -28,7 +25,7 @@ export default {
 			openId: Home
 		}
 	},
-	components: { Header, Footer, Blog, Home, Git, Project, Community, ToolWebsite, File },
+	components: { Header, Blog, Home, Git, Project, Community, ToolWebsite, File },
 	computed: {},
 	methods: {
 		open(data) {
@@ -41,7 +38,7 @@ export default {
 @import './assets/css/resert.css';
 .App {
 	/* width: 100vw; */
-	height: 100vh;
+	min-height: 100vh;
 	padding: 66px 36px 0;
 	text-align: left;
 	/* color: skyblue; */
@@ -49,15 +46,8 @@ export default {
 	background-color: antiquewhite;
 }
 #header {
-	position: absolute;
+	position: fixed;
 	right: 0;
 	top: 0;
-}
-#footer {
-	position: absolute;
-	left: 10%;
-	bottom: 5%;
-	color: black;
-	opacity: 0.8;
 }
 </style>

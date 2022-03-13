@@ -1,18 +1,11 @@
 <!-- blog想法 -->
 <template>
   <div class='blog'>
-    <h1>blog
-      在看博客
-      阮一峰。。
-    </h1>
-    <el-row>
-      <el-button>默认按钮</el-button>
-      <el-button type="primary">主要按钮</el-button>
-      <el-button type="success">成功按钮</el-button>
-      <el-button type="info">信息按钮</el-button>
-      <el-button type="warning">警告按钮</el-button>
-      <el-button type="danger">危险按钮</el-button>
-    </el-row>
+    <div id="main">
+      <h1>包括大神博客以及github</h1>
+      <el-button type="primary" @click="jumpRuan">阮一峰博客</el-button>
+      <el-button type="success" @click="jumpLiao">廖雪峰博客</el-button>
+    </div>
   </div>
 </template>
 
@@ -25,14 +18,24 @@ export default {
 	components: {},
 	data() {
 		//这里存放数据
-		return {}
+		return {
+			ruan: 'https://wangdoc.com',
+			liao: 'https://www.liaoxuefeng.com'
+		}
 	},
 	//监听属性 类似于data概念
 	computed: {},
 	//监控data中的数据变化
 	watch: {},
 	//方法集合
-	methods: {},
+	methods: {
+		jumpRuan() {
+			window.location.href = this.ruan
+		},
+		jumpLiao() {
+			window.location.href = this.liao
+		}
+	},
 	//生命周期 - 创建完成（可以访问当前this实例）
 	created() {},
 	//生命周期 - 挂载完成（可以访问DOM元素）
@@ -46,5 +49,11 @@ export default {
 	activated() {} //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
-<style lang='css' scoped>
+<style lang='scss' scoped>
+#main {
+	padding: 20px 66px;
+	& > h1 {
+		padding: 20px 0;
+	}
+}
 </style>
