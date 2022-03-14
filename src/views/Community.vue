@@ -3,9 +3,11 @@
   <div class='community'>
     <div class="ceng1">
       <h1>社区</h1>
-      <el-button type="primary" @click="jumpJue">掘金</el-button>
-      <el-button type="primary" @click="jumpOschina">oschina</el-button>
-      <el-button type="primary" @click="jumpStackoverflow">stackoverflow</el-button>
+      <div class="btn">
+        <el-button type="primary" @click="jumpJue">掘金</el-button>
+        <el-button type="primary" @click="jumpOschina">oschina</el-button>
+        <el-button type="primary" @click="jumpStackoverflow">stackoverflow</el-button>
+      </div>
     </div>
   </div>
 </template>
@@ -65,8 +67,13 @@ export default {
 		font-size: 24px;
 		padding: 20px 0;
 	}
+	& > .btn {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
 }
 .el-button {
-	margin: 10px 5px;
+	margin: 10px 10px;
 }
 </style>

@@ -58,4 +58,7 @@ export default {
 		padding: 20px 0;
 	}
 }
+.el-button {
+	margin: 10px 10px;
+}
 </style>

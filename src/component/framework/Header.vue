@@ -19,9 +19,9 @@
       <div class="headers4" @click="open('Community')">
         社区
       </div>
-      <div class="headers5" @click="open('')">
+      <!-- <div class="headers5" @click="open('')">
         待续
-      </div>
+      </div> -->
       <div class="headers2" @click="jump">
       </div>
     </div>
@@ -80,9 +80,9 @@ export default {
 }
 .header-left {
 	cursor: pointer;
-	width: 32px;
-	height: 32px;
-	background: url(../../assets/header/footerball.png);
+	width: 38px;
+	height: 38px;
+	background: url(../../assets/header/footerball.png) no-repeat center;
 }
 .header-right {
 	display: flex;

@@ -8,6 +8,7 @@
         <el-button type="success" @click="jumpReact">react</el-button>
         <el-button type="info" @click="jumpAngular">angular</el-button>
         <el-button type="warning" @click="jumpAngular">小程序</el-button>
+        <el-button type="danger" @click="jumpUni">uniapp</el-button>
       </div>
     </div>
     <div class="ceng1">
@@ -42,6 +43,7 @@
       <h1>项目工具</h1>
       <el-button type="primary" @click="jumpVivify">vivify</el-button>
       <el-button type="success" @click="jumpYin">印象中文</el-button>
+      <el-button type="info" @click="jumpDate">jsDate日期控件</el-button>
     </div>
 
     <div class="ceng1">
@@ -105,7 +107,9 @@ export default {
 			fanyi: 'https://fanyi.baidu.com/?aldtype=16047',
 			wechat: 'https://developers.weixin.qq.com/miniprogram/dev/framework',
 			vivify: 'http://vivify.mkcreative.cz',
-			yin: 'https://docschina.org'
+			yin: 'https://docschina.org',
+			date: 'http://jemui.com/uidoc/jedate.html',
+			uniapp: 'https://uniapp.dcloud.io'
 		}
 	},
 	//监听属性 类似于data概念
@@ -182,6 +186,12 @@ export default {
 		},
 		jumpYin() {
 			window.location.href = this.yin
+		},
+		jumpDate() {
+			window.location.href = this.date
+		},
+		jumpUni() {
+			window.location.href = this.uniapp
 		}
 	},
 	//生命周期 - 创建完成（可以访问当前this实例）
@@ -215,9 +225,10 @@ export default {
 		/* min-width: 360px; */
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: flex-start;
 	}
 }
 .el-button {
-	margin: 10px 5px;
+	margin: 10px 10px;
 }
 </style>

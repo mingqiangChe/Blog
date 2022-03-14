@@ -102,4 +102,7 @@ export default {
 		cursor: pointer;
 	}
 }
+.el-button {
+	margin: 10px 10px;
+}
 </style>
