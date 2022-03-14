@@ -16,6 +16,7 @@
       <h1>依赖工具</h1>
       <el-button type="primary" @click="jumpNpm">npm</el-button>
       <el-button type="success" @click="jumpNode">node</el-button>
+      <el-button type="info" @click="jumpBabel">babel</el-button>
     </div>
     <div class="ceng1">
       <h1>代码管理</h1>
@@ -80,7 +81,8 @@ export default {
 			git: 'https://git-scm.com',
 			itSource: 'https://www.itresource.org',
 			game: 'https://www.yikm.net',
-			aliIcon: 'https://www.iconfont.cn'
+			aliIcon: 'https://www.iconfont.cn',
+			babel: 'https://www.babeljs.cn'
 		}
 	},
 	//监听属性 类似于data概念
@@ -139,6 +141,9 @@ export default {
 		},
 		jumpAliIcon() {
 			window.location.href = this.aliIcon
+		},
+		jumpBabel() {
+			window.location.href = this.babel
 		}
 	},
 	//生命周期 - 创建完成（可以访问当前this实例）

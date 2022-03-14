@@ -5,11 +5,11 @@ import store from './store'// ++
 // import './assets/css/resert.css'
 
 // 引入element
-// import element from './elementUi'
-// Vue.use(element)
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
+// import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
+import { Button } from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';//css文件很容易忘记引入
+Vue.use(Button);
 
 new Vue({
   router,
