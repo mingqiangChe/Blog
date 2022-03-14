@@ -2,7 +2,7 @@
 <template>
   <div class='blog'>
     <div id="main">
-      <h1>包括大神博客以及github</h1>
+      <h1>包含大神博客以及github</h1>
       <el-button type="primary" @click="jumpRuan">阮一峰博客</el-button>
       <el-button type="success" @click="jumpLiao">廖雪峰博客</el-button>
     </div>
@@ -56,6 +56,7 @@ export default {
 	padding: 20px 34px;
 	& > h1 {
 		padding: 20px 0;
+		font-weight: bolder;
 	}
 }
 .el-button {

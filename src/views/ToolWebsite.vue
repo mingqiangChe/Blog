@@ -220,6 +220,7 @@ export default {
 	& > h1 {
 		font-size: 24px;
 		padding: 20px 0;
+		font-weight: bolder;
 	}
 	& > .btn {
 		/* min-width: 360px; */
