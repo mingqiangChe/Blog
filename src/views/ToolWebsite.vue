@@ -3,9 +3,25 @@
   <div class='main'>
     <div class="ceng1">
       <h1>技术栈</h1>
-      <el-button type="primary" @click="jumpVue">vue</el-button>
-      <el-button type="success" @click="jumpReact">react</el-button>
-      <el-button type="info" @click="jumpAngular">angular</el-button>
+      <div class="btn">
+        <el-button type="primary" @click="jumpVue">vue</el-button>
+        <el-button type="success" @click="jumpReact">react</el-button>
+        <el-button type="info" @click="jumpAngular">angular</el-button>
+        <el-button type="warning" @click="jumpAngular">小程序</el-button>
+      </div>
+    </div>
+    <div class="ceng1">
+      <h1>翻译工具</h1>
+      <el-button type="primary" @click="jumpFanyi">百度翻译</el-button>
+    </div>
+    <div class="ceng1">
+      <h1>算法数据结构</h1>
+      <el-button type="primary" @click="jumpLeecode">leecode</el-button>
+    </div>
+    <div class="ceng1">
+      <h1>框架工具</h1>
+      <el-button type="primary" @click="jumpElement">Element</el-button>
+      <el-button type="success" @click="jumpVant">vant</el-button>
     </div>
     <div class="ceng1">
       <h1>打包工具</h1>
@@ -23,14 +39,16 @@
       <el-button type="primary" @click="jumpGit">git</el-button>
     </div>
     <div class="ceng1">
+      <h1>项目工具</h1>
+      <el-button type="primary" @click="jumpVivify">vivify</el-button>
+      <el-button type="success" @click="jumpYin">印象中文</el-button>
+    </div>
+
+    <div class="ceng1">
       <h1>标签兼容性</h1>
       <el-button type="primary" @click="jumpCan">can i use</el-button>
     </div>
-    <div class="ceng1">
-      <h1>框架工具</h1>
-      <el-button type="primary" @click="jumpElement">Element</el-button>
-      <el-button type="success" @click="jumpVant">vant</el-button>
-    </div>
+
     <div class="ceng1">
       <h1>项目上线</h1>
       <el-button type="primary" @click="jumpGzip">熊猫压缩</el-button>
@@ -82,7 +100,12 @@ export default {
 			itSource: 'https://www.itresource.org',
 			game: 'https://www.yikm.net',
 			aliIcon: 'https://www.iconfont.cn',
-			babel: 'https://www.babeljs.cn'
+			babel: 'https://www.babeljs.cn',
+			leecode: 'https://leetcode-cn.com',
+			fanyi: 'https://fanyi.baidu.com/?aldtype=16047',
+			wechat: 'https://developers.weixin.qq.com/miniprogram/dev/framework',
+			vivify: 'http://vivify.mkcreative.cz',
+			yin: 'https://docschina.org'
 		}
 	},
 	//监听属性 类似于data概念
@@ -144,6 +167,21 @@ export default {
 		},
 		jumpBabel() {
 			window.location.href = this.babel
+		},
+		jumpLeecode() {
+			window.location.href = this.leecode
+		},
+		jumpFanyi() {
+			window.location.href = this.fanyi
+		},
+		jumpAngular() {
+			window.location.href = this.wechat
+		},
+		jumpVivify() {
+			window.location.href = this.vivify
+		},
+		jumpYin() {
+			window.location.href = this.yin
 		}
 	},
 	//生命周期 - 创建完成（可以访问当前this实例）
@@ -160,14 +198,26 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
+/* @import '~element-ui/packages/theme-chalk/src/base.scss'; */
+@import '~element-ui/packages/theme-chalk/src/button.scss';
 .main {
-	padding: 20px 66px;
+	padding: 20px 34px;
+	box-sizing: border-box;
 }
 .ceng1 {
 	/* padding-top: 24px; */
+	/* display: flex; */
 	& > h1 {
 		font-size: 24px;
 		padding: 20px 0;
 	}
+	& > .btn {
+		/* min-width: 360px; */
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+.el-button {
+	margin: 10px 5px;
 }
 </style>

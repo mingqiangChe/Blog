@@ -50,8 +50,10 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
+@import '~element-ui/packages/theme-chalk/src/button.scss';
 #main {
-	padding: 20px 66px;
+	/* min-width: 380px; */
+	padding: 20px 34px;
 	& > h1 {
 		padding: 20px 0;
 	}

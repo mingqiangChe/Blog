@@ -10,7 +10,6 @@
 </template>
 <script>
 import Header from './component/framework/Header.vue'
-import Footer from './component/framework/Footer.vue'
 import Blog from './views/Blog.vue'
 import Home from './views/Home.vue'
 import Git from './views/Git.vue'
@@ -22,7 +21,7 @@ export default {
 	name: 'App',
 	data() {
 		return {
-			openId: Home
+			openId: Blog
 		}
 	},
 	components: { Header, Blog, Home, Git, Project, Community, ToolWebsite, File },
@@ -46,8 +45,12 @@ export default {
 	background-color: antiquewhite;
 }
 #header {
+	width: 100vw;
 	position: fixed;
 	right: 0;
 	top: 0;
+}
+.el-button {
+	margin: 10px 5px;
 }
 </style>

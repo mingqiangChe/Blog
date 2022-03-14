@@ -84,10 +84,11 @@ export default {
 <style lang='scss' scoped>
 .home {
 	box-sizing: border-box;
-	padding: 110px 147px 10px;
+	padding: 104px 50px 10px;
 	& > h1 {
 		color: black;
 		font-size: 32px;
+		min-width: 218px;
 		padding-bottom: 16px;
 		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 		font-weight: bolder;
@@ -95,6 +96,7 @@ export default {
 	& > p {
 		font-size: 16px;
 		padding: 16px 0;
+		min-width: 218px;
 	}
 	& > p > i {
 		cursor: pointer;

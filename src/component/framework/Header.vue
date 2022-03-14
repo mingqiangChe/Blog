@@ -69,7 +69,8 @@ export default {
 </script>
 <style lang='scss' scoped>
 .header {
-	width: 100vw;
+	/* width: 100vw; */
+	min-width: 390px;
 	display: flex;
 	justify-content: space-between;
 	box-sizing: border-box;

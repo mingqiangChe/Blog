@@ -41,7 +41,12 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
+@import '~element-ui/packages/theme-chalk/src/button.scss';
 .project {
-	margin-top: 66px;
+	/* margin-top: 66px; */
+	/* width: 100vw; */
+	/* min-width: 390px; */
+	padding: 20px 34px;
+	box-sizing: border-box;
 }
 </style>

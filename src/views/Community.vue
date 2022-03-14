@@ -55,8 +55,9 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
+@import '~element-ui/packages/theme-chalk/src/button.scss';
 .community {
-	padding: 20px 66px;
+	padding: 20px 34px;
 }
 .ceng1 {
 	margin-top: 24px;
@@ -64,5 +65,8 @@ export default {
 		font-size: 24px;
 		padding: 20px 0;
 	}
+}
+.el-button {
+	margin: 10px 5px;
 }
 </style>

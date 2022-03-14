@@ -4,6 +4,7 @@
     <div class="ceng1">
       <h1>看文档</h1>
       <el-button type="primary" @click="jumpMdn">MDN</el-button>
+      <el-button type="primary" @click="jumpAxios">axios</el-button>
     </div>
     <div class="ceng1">
       <h1>W3C</h1>
@@ -45,7 +46,8 @@ export default {
 			htm: 'https://www.w3school.com.cn/html/index.asp',
 			cs: 'https://www.w3school.com.cn/css/index.asp',
 			sql: 'https://www.w3school.com.cn/sql/index.asp',
-			linux: 'https://www.runoob.com/w3cnote/linux-common-command-2.html'
+			linux: 'https://www.runoob.com/w3cnote/linux-common-command-2.html',
+			axios: 'http://www.axios-js.com/zh-cn'
 		}
 	},
 	//监听属性 类似于data概念
@@ -74,6 +76,9 @@ export default {
 		},
 		jumpLinux() {
 			window.location.href = this.linux
+		},
+		jumpAxios() {
+			window.location.href = this.axios
 		}
 	},
 	//生命周期 - 创建完成（可以访问当前this实例）
@@ -90,8 +95,12 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
+@import '~element-ui/packages/theme-chalk/src/button.scss';
 .file {
-	padding: 20px 66px;
+	/* width: 100vw; */
+	/* min-width: 390px; */
+	padding: 20px 34px;
+	box-sizing: border-box;
 	& > h1 {
 		padding: 20px 0;
 	}
@@ -102,5 +111,8 @@ export default {
 		font-size: 24px;
 		padding: 20px 0;
 	}
+}
+.el-button {
+	margin: 10px 5px;
 }
 </style>
