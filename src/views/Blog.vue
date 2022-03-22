@@ -5,17 +5,22 @@
       <h1>包含大神博客以及github</h1>
       <el-button type="primary" @click="jumpRuan">阮一峰博客</el-button>
       <el-button type="success" @click="jumpLiao">廖雪峰博客</el-button>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
+
   </div>
 </template>
 
 <script>
+import Footer from '../component/framework/Footer.vue'
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 《组件名称》 from '《组件路径》';
 
 export default {
 	//import引入的组件需要注入到对象中才能使用
-	components: {},
+	components: { Footer },
 	data() {
 		//这里存放数据
 		return {

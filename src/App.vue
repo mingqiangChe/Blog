@@ -50,7 +50,4 @@ export default {
 	right: 0;
 	top: 0;
 }
-.el-button {
-	margin: 10px 5px;
-}
 </style>

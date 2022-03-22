@@ -16,7 +16,8 @@ module.exports = {
     // 生成的 chunk 名称
     chunkFilename: 'js/[name].[hash:8].js',
     // 资源引用的路径
-    publicPath: '/'
+    publicPath: '/',
+
   },
   devServer: {
     hot: true,
@@ -33,6 +34,19 @@ module.exports = {
       '.js',
       '.vue'
     ]
+  },
+  // webpack性能警告关闭
+  performance: {
+    hints: 'warning',
+    //入口起点的最大体积 整数类型（以字节为单位）
+    maxEntrypointSize: 50000000,
+    //生成文件的最大体积 整数类型（以字节为单位 300k）
+    maxAssetSize: 30000000,
+    //只给出 js 文件的性能提示
+    assetFilter: function (assetFilename) {
+      return assetFilename.endsWith('.js');
+    }
+
   },
   module: {
     rules: [
@@ -67,11 +81,11 @@ module.exports = {
               fallback: {
                 loader: 'file-loader',
                 options: {
-                  limit: 4400,
+                  limit: 8192,
                   name: 'img/[name].[hash:8].[ext]',
                   //解决图片不显示，路径为[object Module]的问题
-                  esModule: false
-                }
+                  esModule: false,
+                },
               }
             }
           }

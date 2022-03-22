@@ -25,7 +25,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 module.exports = merge(webpackConfig, {
   mode: 'production',
-  devtool: '#source-map',
+  // devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   optimization: {
     splitChunks: {
       cacheGroups: {

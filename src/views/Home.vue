@@ -1,21 +1,22 @@
 <!-- home个人简介 -->
 <template>
-  <div class='home'>
-    <h1>车明强</h1>
-    <p>大家好，我是一名喜欢敲代码的前端程序猿。目前居住深圳</p>
-    <p>代码无所不能，成为我的热情所在。你可以在这里找到我的技术文档以及项目列表。我准备在这个网站上做各种技术上的尝试。</p>
-    <p>
-      在编程之外，我喜欢足球和旅行。如果有人同在一所城市，也许可以一起出去旅游拍照。
-    </p>
-    <p>目前的话，仅可以在<i @click="jump">github</i>上寻找到我。</p>
-    <p>有兴趣的话，交个朋友。可以给我发邮件 cmq15650272396@163.com。</p>
-    <p></p>
+	<div class="home">
+		<h1>车明强</h1>
+		<p>大家好，我是一名喜欢敲代码的前端程序猿。目标：我想成为别人羡慕的那个人</p>
+		<p>代码无所不能，成为我的热情所在。你可以在这里找到我的技术文档以及项目列表。我准备在这个网站上做各种技术上的尝试。</p>
+		<p>在编程之外，我喜欢足球和旅行。如果有人同在一所城市，也许可以一起出去旅游拍照。</p>
+		<p>
+			目前的话，仅可以在
+			<i @click="jump">github</i>
+			上寻找到我。
+		</p>
+		<p>有兴趣的话，交个朋友。可以给我发邮件 cmq15650272396@163.com。</p>
+		<p></p>
 
-    <footer>
-      <Footer></Footer>
-    </footer>
-  </div>
-
+		<footer>
+			<Footer></Footer>
+		</footer>
+	</div>
 </template>
 
 <script>
@@ -81,16 +82,17 @@ export default {
 	activated() {} //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .home {
 	box-sizing: border-box;
 	padding: 104px 50px 10px;
+	font-family: 'Times New Roman', Times, serif;
 	& > h1 {
 		color: black;
 		font-size: 32px;
 		min-width: 218px;
 		padding-bottom: 16px;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-family: Georgia, 'Times New Roman', Times, serif;
 		font-weight: bolder;
 	}
 	& > p {
@@ -101,8 +103,5 @@ export default {
 	& > p > i {
 		cursor: pointer;
 	}
-}
-.el-button {
-	margin: 10px 10px;
 }
 </style>

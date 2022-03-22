@@ -1,77 +1,79 @@
 <!-- 工具网站 -->
 <template>
-  <div class='main'>
-    <div class="ceng1">
-      <h1>技术栈</h1>
-      <div class="btn">
-        <el-button type="primary" @click="jumpVue">vue</el-button>
-        <el-button type="success" @click="jumpReact">react</el-button>
-        <el-button type="info" @click="jumpAngular">angular</el-button>
-        <el-button type="warning" @click="jumpAngular">小程序</el-button>
-        <el-button type="danger" @click="jumpUni">uniapp</el-button>
-      </div>
-    </div>
-    <div class="ceng1">
-      <h1>翻译工具</h1>
-      <el-button type="primary" @click="jumpFanyi">百度翻译</el-button>
-    </div>
-    <div class="ceng1">
-      <h1>算法数据结构</h1>
-      <el-button type="primary" @click="jumpLeecode">leecode</el-button>
-    </div>
-    <div class="ceng1">
-      <h1>框架工具</h1>
-      <el-button type="primary" @click="jumpElement">Element</el-button>
-      <el-button type="success" @click="jumpVant">vant</el-button>
-    </div>
-    <div class="ceng1">
-      <h1>打包工具</h1>
-      <el-button type="primary" @click="jumpWebpack">webpack</el-button>
-      <el-button type="success" @click="jumpVite">vite</el-button>
-    </div>
-    <div class="ceng1">
-      <h1>依赖工具</h1>
-      <el-button type="primary" @click="jumpNpm">npm</el-button>
-      <el-button type="success" @click="jumpNode">node</el-button>
-      <el-button type="info" @click="jumpBabel">babel</el-button>
-    </div>
-    <div class="ceng1">
-      <h1>代码管理</h1>
-      <el-button type="primary" @click="jumpGit">git</el-button>
-    </div>
-    <div class="ceng1">
-      <h1>项目工具</h1>
-      <el-button type="primary" @click="jumpVivify">vivify</el-button>
-      <el-button type="success" @click="jumpYin">印象中文</el-button>
-      <el-button type="info" @click="jumpDate">jsDate日期控件</el-button>
-    </div>
+	<div class="main">
+		<div class="ceng1">
+			<h1>技术栈</h1>
+			<div class="btn">
+				<el-button type="primary" @click="jumpVue">vue</el-button>
+				<el-button type="success" @click="jumpReact">react</el-button>
+				<el-button type="info" @click="jumpAngular">angular</el-button>
+				<el-button type="warning" @click="jumpAngular">小程序</el-button>
+				<el-button type="danger" @click="jumpUni">uniapp</el-button>
+			</div>
+		</div>
+		<div class="ceng1">
+			<h1>翻译工具</h1>
+			<el-button type="primary" @click="jumpFanyi">百度翻译</el-button>
+		</div>
+		<div class="ceng1">
+			<h1>算法数据结构</h1>
+			<el-button type="primary" @click="jumpLeecode">leecode</el-button>
+		</div>
+		<div class="ceng1">
+			<h1>框架工具</h1>
+			<el-button type="primary" @click="jumpElement">Element</el-button>
+			<el-button type="success" @click="jumpVant">vant</el-button>
+		</div>
+		<div class="ceng1">
+			<h1>自动化构建工具</h1>
+			<el-button type="primary" @click="jumpWebpack">webpack</el-button>
+			<el-button type="success" @click="jumpVite">vite</el-button>
+			<el-button type="danger" @click="jumpNuxt">nuxt</el-button>
+			<el-button type="info" @click="jumpGrunt">grunt</el-button>
+			<el-button type="default" @click="jumpGulp">gulp</el-button>
+		</div>
+		<div class="ceng1">
+			<h1>依赖工具</h1>
+			<el-button type="primary" @click="jumpNpm">npm</el-button>
+			<el-button type="success" @click="jumpNode">node</el-button>
+			<el-button type="info" @click="jumpBabel">babel</el-button>
+		</div>
+		<div class="ceng1">
+			<h1>代码管理</h1>
+			<el-button type="primary" @click="jumpGit">git</el-button>
+		</div>
+		<div class="ceng1">
+			<h1>项目工具</h1>
+			<el-button type="primary" @click="jumpVivify">vivify</el-button>
+			<el-button type="success" @click="jumpYin">印象中文</el-button>
+			<el-button type="info" @click="jumpDate">jsDate日期控件</el-button>
+		</div>
 
-    <div class="ceng1">
-      <h1>标签兼容性</h1>
-      <el-button type="primary" @click="jumpCan">can i use</el-button>
-    </div>
+		<div class="ceng1">
+			<h1>标签兼容性</h1>
+			<el-button type="primary" @click="jumpCan">can i use</el-button>
+		</div>
 
-    <div class="ceng1">
-      <h1>项目上线</h1>
-      <el-button type="primary" @click="jumpGzip">熊猫压缩</el-button>
-      <el-button type="success" @click="jumpAlibaba">阿里云服务器</el-button>
-      <el-button type="info" @click="jumpTxyun">阿里云服务器</el-button>
-
-    </div>
-    <div class="ceng1">
-      <h1>资源工具</h1>
-      <el-button type="primary" @click="jumpItsource">IT资源网</el-button>
-      <el-button type="success" @click="jumpAliIcon">阿里巴巴矢量图标</el-button>
-    </div>
-    <div class="ceng1">
-      <h1>休闲工具</h1>
-      <el-button type="primary" @click="jumpGame">童年手柄游戏</el-button>
-      <!-- <el-button type="success" @click="jumpVant">vant</el-button> -->
-    </div>
-    <footer>
-      <Footer></Footer>
-    </footer>
-  </div>
+		<div class="ceng1">
+			<h1>项目上线</h1>
+			<el-button type="primary" @click="jumpGzip">熊猫压缩</el-button>
+			<el-button type="success" @click="jumpAlibaba">阿里云服务器</el-button>
+			<el-button type="info" @click="jumpTxyun">阿里云服务器</el-button>
+		</div>
+		<div class="ceng1">
+			<h1>资源工具</h1>
+			<el-button type="primary" @click="jumpItsource">IT资源网</el-button>
+			<el-button type="success" @click="jumpAliIcon">阿里巴巴矢量图标</el-button>
+		</div>
+		<div class="ceng1">
+			<h1>休闲工具</h1>
+			<el-button type="primary" @click="jumpGame">童年手柄游戏</el-button>
+			<!-- <el-button type="success" @click="jumpVant">vant</el-button> -->
+		</div>
+		<footer>
+			<Footer></Footer>
+		</footer>
+	</div>
 </template>
 
 <script>
@@ -109,7 +111,10 @@ export default {
 			vivify: 'http://vivify.mkcreative.cz',
 			yin: 'https://docschina.org',
 			date: 'http://jemui.com/uidoc/jedate.html',
-			uniapp: 'https://uniapp.dcloud.io'
+			uniapp: 'https://uniapp.dcloud.io',
+			nuxt: 'https://www.nuxtjs.cn',
+			grunt: 'https://www.gruntjs.net',
+			gulp: 'https://www.gulpjs.com.cn'
 		}
 	},
 	//监听属性 类似于data概念
@@ -192,6 +197,15 @@ export default {
 		},
 		jumpUni() {
 			window.location.href = this.uniapp
+		},
+		jumpNuxt() {
+			window.location.href = this.nuxt
+		},
+		jumpGrunt() {
+			window.location.href = this.grunt
+		},
+		jumpGulp() {
+			window.location.href = this.gulp
 		}
 	},
 	//生命周期 - 创建完成（可以访问当前this实例）
@@ -207,7 +221,7 @@ export default {
 	activated() {} //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 /* @import '~element-ui/packages/theme-chalk/src/base.scss'; */
 @import '~element-ui/packages/theme-chalk/src/button.scss';
 .main {
